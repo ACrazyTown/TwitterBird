@@ -1,2 +1,5 @@
-# TwitterBird
-Source code for Kill The Twitter Bird (HaxeFlixel ver.)
+# Kill the Twitter Bird
+
+The GitHub repository for **Kill The Twitter Bird**, the worst video game to date!
+
+Made with [**HaxeFlixel**](https://haxeflixel.com)
