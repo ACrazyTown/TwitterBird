@@ -1,4 +1,4 @@
-# Kill the Twitter Bird
+# Kill The Twitter Bird
 
 The GitHub repository for **Kill The Twitter Bird**, the worst video game to date!
 
