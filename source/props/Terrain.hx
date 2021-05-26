@@ -10,15 +10,9 @@ class Terrain extends FlxNapeSprite
 	{
 		super(x, y);
 
-        makeGraphic(64, 64, 0x0);
-
-		body.position.x = x;
-		body.position.y = y;
-
 		setPosition(x, y);
 
-		createRectangularBody();
-
         loadGraphic("assets/images/terrainGrass.png");
+		createRectangularBody();
 	}
 }

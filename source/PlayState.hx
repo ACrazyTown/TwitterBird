@@ -97,7 +97,7 @@ class PlayState extends FlxState
 		bg.alpha = 0.7;
 		add(bg);
 
-		terrain = new Terrain(649, 659);
+		terrain = new Terrain(349, 659);
 
 		terrain.scale.set(11, 1.90);
 		terrain.body.allowMovement = false;
@@ -125,6 +125,7 @@ class PlayState extends FlxState
 		super.update(elapsed);
 		//FlxNapeSpace.space.gravity.setxy(0, 750);
 		FlxNapeSpace.space.gravity.setxy(0, 750);
+		FlxG.worldBounds.set(0, 0, FlxG.width, FlxG.height);
 		FlxG.debugger.drawDebug = true;
 
 		trace(terrain.body.position.x);

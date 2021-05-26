@@ -9,16 +9,10 @@ class Player extends FlxNapeSprite
     public function new(x:Float, y:Float)
     {
         super(x, y);
-        
-        makeGraphic(302, 323, 0x0);
-
-        body.position.x = x;
-        body.position.y = y;
 
         setPosition(x, y);
 
+		loadGraphic("assets/images/twitterBird.png");
 		createRectangularBody();
-        loadGraphic("assets/images/twitterBird.png");
-
     }
 }
