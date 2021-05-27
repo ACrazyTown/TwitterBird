@@ -124,6 +124,7 @@ class PlayState extends FlxState
 		FlxNapeSpace.space.gravity.setxy(0, 750);
 		FlxNapeSpace.drawDebug = true;
 
+		// these are for DEBUGGING purposes
 		trace(terrain.body.position.x);
 		trace(terrain.body.position.y);
 
