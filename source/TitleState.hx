@@ -64,9 +64,10 @@ class TitleState extends FlxTransitionableState
 
         for (i in 0...menuOptions.length)
         {
-            var texty:FlxText = new FlxText((FlxG.width / 2), (FlxG.height / 2) + (i * 50), 0, menuOptions[i], 42);
+            var texty:FlxText = new FlxText(0, 375 + (i * 50), 0, menuOptions[i], 42);
             texty.setFormat(null, 42, FlxColor.WHITE);
             texty.ID = i;
+			texty.x = (FlxG.width / 2) - (texty.width / 2);
             txtGroup.add(texty);
         }
 	}

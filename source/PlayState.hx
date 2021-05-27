@@ -73,8 +73,6 @@ import flixel.addons.nape.FlxNapeSpace;
 import flixel.addons.nape.FlxNapeSprite;
 import flixel.util.FlxColor;
 
-//import nape.physics.BodyType;
-
 import props.Player;
 import props.Terrain;
 
@@ -87,7 +85,6 @@ class PlayState extends FlxState
 	{
 		super.create();
 		FlxNapeSpace.init();
-
 		/*
 		var bg:FlxSprite = new FlxSprite(0, 0).makeGraphic(FlxG.width, FlxG.height, FlxColor.fromRGB(21, 104, 142, 255));
 		add(bg);
@@ -99,7 +96,7 @@ class PlayState extends FlxState
 
 		terrain = new Terrain(349, 659);
 
-		terrain.scale.set(11, 1.90);
+		//terrain.scale.set(11, 1.90);
 		terrain.body.allowMovement = false;
 		terrain.body.allowRotation = false;
 		terrain.physicsEnabled = true;
@@ -125,14 +122,13 @@ class PlayState extends FlxState
 		super.update(elapsed);
 		//FlxNapeSpace.space.gravity.setxy(0, 750);
 		FlxNapeSpace.space.gravity.setxy(0, 750);
-		FlxG.worldBounds.set(0, 0, FlxG.width, FlxG.height);
-		FlxG.debugger.drawDebug = true;
+		FlxNapeSpace.drawDebug = true;
 
 		trace(terrain.body.position.x);
 		trace(terrain.body.position.y);
 
 		if (FlxG.keys.pressed.LEFT)
-			terrain.body.position.x--;
+			terrain.body.position.x = terrain.body.position.x + 5;
 		if (FlxG.keys.pressed.RIGHT)
 			terrain.body.position.x++;
 		if (FlxG.keys.pressed.UP)
