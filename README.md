@@ -1,4 +1,5 @@
-# twitter bird
-## unstable branch
+# kill da twittey bird
+## unstable / dev branch
 
-very broken yes
+the branch where the Dev happens (Got dam)
+**very broken**
