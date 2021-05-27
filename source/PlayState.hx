@@ -96,7 +96,7 @@ class PlayState extends FlxState
 
 		terrain = new Terrain(349, 659);
 
-		//terrain.scale.set(11, 1.90);
+		terrain.scale.set(11, 1.90);
 		terrain.body.allowMovement = false;
 		terrain.body.allowRotation = false;
 		terrain.physicsEnabled = true;
