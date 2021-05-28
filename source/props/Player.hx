@@ -18,6 +18,6 @@ class Player extends FlxNapeSprite
 		loadGraphic("assets/images/twitterBird.png");
 		createRectangularBody();
 
-		setBodyMaterial(1, 0.3, 0.2, 0.6, 1);
+		setBodyMaterial(0, 0.5, 0.7, 1, 1);
     }
 }
