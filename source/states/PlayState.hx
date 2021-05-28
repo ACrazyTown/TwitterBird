@@ -64,7 +64,7 @@
 
  */
 
-package;
+package states;
 
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -72,6 +72,8 @@ import flixel.FlxState;
 import flixel.addons.nape.FlxNapeSpace;
 import flixel.addons.nape.FlxNapeSprite;
 import flixel.util.FlxColor;
+
+import states.substates.GameOverSubState;
 
 import props.Player;
 import props.Terrain;
@@ -85,7 +87,7 @@ class PlayState extends FlxState
 	{
 		super.create();
 		FlxNapeSpace.init();
-		FlxNapeSpace.space.gravity.setxy(0, 750);
+		FlxNapeSpace.space.gravity.setxy(0, 500);
 
 		/*
 		var bg:FlxSprite = new FlxSprite(0, 0).makeGraphic(FlxG.width, FlxG.height, FlxColor.fromRGB(21, 104, 142, 255));
@@ -126,9 +128,17 @@ class PlayState extends FlxState
 		//FlxNapeSpace.space.gravity.setxy(0, 750);
 		FlxNapeSpace.drawDebug = true;
 
+		if (!player.isOnScreen(FlxG.camera))
+		{
+			player.kill();
+		}
+
+		if (!player.alive)
+		{
+			super.openSubState(new GameOverSubState(player.getScreenPosition().x, player.getScreenPosition().y));
+		}
+
 		// these are for DEBUGGING purposes
-		trace(terrain.body.position.x);
-		trace(terrain.body.position.y);
 
 		if (FlxG.keys.pressed.LEFT)
 			terrain.body.position.x = terrain.body.position.x + 5;
