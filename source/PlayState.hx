@@ -97,22 +97,20 @@ class PlayState extends FlxState
 		terrain = new Terrain(349, 659);
 
 		terrain.scale.set(11, 1.90);
+		terrain.body.scaleShapes(11, 1.90);
+
 		terrain.body.allowMovement = false;
 		terrain.body.allowRotation = false;
-		terrain.physicsEnabled = true;
-		terrain.solid = true;
-
-		terrain.updateHitbox();
+		
+		//terrain.updateHitbox();
 
 		add(terrain);
 
 		player = new Player(600, 485);
 
 		player.setGraphicSize(Std.int(150));
-		player.updateHitbox();
-
-		player.physicsEnabled = true;
-		player.solid = true;
+		player.body.scaleShapes(player.scale.x, player.scale.y);
+		//player.updateHitbox();
 
 		add(player);
 	}
