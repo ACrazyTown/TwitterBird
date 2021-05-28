@@ -85,6 +85,8 @@ class PlayState extends FlxState
 	{
 		super.create();
 		FlxNapeSpace.init();
+		FlxNapeSpace.space.gravity.setxy(0, 750);
+
 		/*
 		var bg:FlxSprite = new FlxSprite(0, 0).makeGraphic(FlxG.width, FlxG.height, FlxColor.fromRGB(21, 104, 142, 255));
 		add(bg);
@@ -96,12 +98,15 @@ class PlayState extends FlxState
 
 		terrain = new Terrain(349, 659);
 
-		terrain.scale.set(11, 1.90);
-		terrain.body.scaleShapes(11, 1.90);
+		terrain.body.position.x = 349;
+		terrain.body.position.y = 659;
 
 		terrain.body.allowMovement = false;
 		terrain.body.allowRotation = false;
 		
+
+		terrain.scale.set(11, 1.90);
+		terrain.body.scaleShapes(11, 1.90);
 		//terrain.updateHitbox();
 
 		add(terrain);
@@ -119,7 +124,6 @@ class PlayState extends FlxState
 	{
 		super.update(elapsed);
 		//FlxNapeSpace.space.gravity.setxy(0, 750);
-		FlxNapeSpace.space.gravity.setxy(0, 750);
 		FlxNapeSpace.drawDebug = true;
 
 		// these are for DEBUGGING purposes

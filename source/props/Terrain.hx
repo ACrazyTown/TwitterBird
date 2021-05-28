@@ -14,7 +14,7 @@ class Terrain extends FlxNapeSprite
 	{
 		super(x, y);
 
-		setPosition(x, y);
+		//setPosition(x, y);
 
 		/*
 		body.position.x = x;
@@ -26,7 +26,7 @@ class Terrain extends FlxNapeSprite
         loadGraphic("assets/images/terrainGrass.png");
 		createRectangularBody();
 
-		body.translateShapes(Vec2.get(0, -120));
+		//body.translateShapes(Vec2.get(0, -120));
 
 		setBodyMaterial(1, 0.3, 0.2, 0.6, 1);
 	}
