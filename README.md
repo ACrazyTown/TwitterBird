@@ -1,5 +1,7 @@
 # Kill The Twitter Bird
 
+**this thing's on hold for a bit - physics & haxeflixel arent the best buddies**
+
 The GitHub repository for **Kill The Twitter Bird**, the worst video game to date!
 
 **If you're looking for code (UNTIL THIS GETS UPDATED), check out the dev-unstable branch!**
